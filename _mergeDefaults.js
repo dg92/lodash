@@ -19,7 +19,6 @@ function mergeDefaults(objValue, srcValue, key, object, source, stack) {
     // Recursively merge objects and arrays (susceptible to call stack limits).
     stack.set(srcValue, objValue);
     baseMerge(objValue, srcValue, undefined, mergeDefaults, stack);
-    stack['delete'](srcValue);
   }
   return objValue;
 }
