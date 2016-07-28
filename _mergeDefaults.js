@@ -21,7 +21,6 @@ define(['./_baseMerge', './isObject'], function(baseMerge, isObject) {
       // Recursively merge objects and arrays (susceptible to call stack limits).
       stack.set(srcValue, objValue);
       baseMerge(objValue, srcValue, undefined, mergeDefaults, stack);
-      stack['delete'](srcValue);
     }
     return objValue;
   }
